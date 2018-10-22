@@ -27,8 +27,7 @@ var routeAcoes = router.get('/Consulte', (requ, res, next) => {
         // console.log('headers:', res.headers);
       
         resinterno.on('data', (d) => {
-          const teste = process.stdout.write(d);
-          res.status(200).send(teste);
+          process.stdout.write(d);          
         });
       });
       
